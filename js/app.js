@@ -5,19 +5,24 @@ document.addEventListener("DOMContentLoaded", function () {
   const list = document.getElementById("todo-list");
   const counter = document.getElementById("counter");
 
+
+
+  
   const allButton = document.getElementById("filter-all");
   const activeButton = document.getElementById("filter-active");
   const doneButton = document.getElementById("filter-done");
 
+  
   let filter = "all";
 
+  
   function updateCounter() {
+    
     let count = 0;
 
     list.querySelectorAll("li").forEach(function (item) {
       if (!item.classList.contains("completed")) {
-        count++;
-      }
+        count++;}
     });
 
     counter.textContent = count + (count === 1 ? " item left" : " items left");
@@ -80,12 +85,10 @@ document.addEventListener("DOMContentLoaded", function () {
     updateCounter();
     filterItems();
   });
-
   allButton.addEventListener("click", function () {
     filter = "all";
     filterItems();
   });
-
   activeButton.addEventListener("click", function () {
     filter = "active";
     filterItems();
@@ -98,3 +101,5 @@ document.addEventListener("DOMContentLoaded", function () {
 
   updateCounter();
 });
+
+
