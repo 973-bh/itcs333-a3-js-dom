@@ -59,6 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const deleteButton = document.createElement("button");
 
     textSpan.textContent = text;
+    textSpan.className = "item-text";
     deleteButton.textContent = "Delete";
     deleteButton.className = "delete-btn";
     deleteButton.type = "button";
